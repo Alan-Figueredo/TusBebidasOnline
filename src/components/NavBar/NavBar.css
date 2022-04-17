@@ -1,0 +1,27 @@
+#nombreH1{
+    color: white;
+    font-size: 30px;
+}
+#linkH1{
+    text-decoration: none;
+}
+.navBarStyle{
+    background-color: grey;
+    border: none;
+}
+.vinculo{
+    color: white;
+    text-decoration: none;
+}
+.vinculo:hover{
+    color: rgb(230, 230, 230);
+    text-decoration: none;
+}
+.nombresCategorias{
+    text-decoration: none;
+    color: black;
+}
+#dropDown{
+    background-color: grey;
+    border: none;
+}

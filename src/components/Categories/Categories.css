@@ -1,0 +1,10 @@
+#loadingCategories{
+    font-size: 20px;
+    margin-top: 17%;
+    margin-bottom: 18%;
+}
+#containerCategories{
+    display: flex;
+    flex-direction: column;
+    min-height: 70vh;
+}

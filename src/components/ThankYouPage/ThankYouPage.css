@@ -1,0 +1,10 @@
+#cardThanks{
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+.dataOperacion{
+    font-size: 17px;
+    font-weight: 500;
+}

@@ -1,0 +1,30 @@
+#cardUserData{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#name{
+    width: 80%;
+    margin: 0 auto;
+}
+#lastName{
+    width: 80%;
+    margin: 0 auto;
+}
+#email{
+    width: 80%;
+    margin: 0 auto;
+}
+#confirmacionEmail{
+    width: 80%;
+    margin: 0 auto;
+}
+#phone{
+    width: 80%;
+    margin: 0 auto;
+}
+#alertaDatos{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}

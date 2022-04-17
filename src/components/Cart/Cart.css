@@ -1,0 +1,30 @@
+#eliminarTodosButton{
+    background-color: "rgba(65,137,230,.15)";
+    color: "#3483fa";
+    width:"auto";
+    float:"right";
+    border: none;
+    height: 40px;
+}
+#eliminarTodosButton:hover{
+    background-color: rgb(211, 211, 211);
+    color: "#3483fa";
+    width:"auto";
+    float:"right";
+    border: none;
+    height: 40px;
+}
+#Total{
+    text-align: "right";
+    margin-right: "15px";
+}
+#Container{
+    display: flex;
+    flex-direction: column;
+    min-height: 70vh;
+}
+#productos{
+    justify-content: center;
+    width: 85%;
+    height: 50%;
+}

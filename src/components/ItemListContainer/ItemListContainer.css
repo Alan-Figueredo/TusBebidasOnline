@@ -1,0 +1,28 @@
+.imagen-card{
+    width: 200px;
+    height: 200px;
+}
+.card{
+    text-align: center;
+    width: 400px;
+}
+#itemContainer{
+    display: flex;
+    flex-direction: column;
+    min-height: 70vh;
+}
+#card{
+    width: 90%;
+    margin: 0 auto;
+}
+#mayor{
+    font-size: 25px;
+}
+.botonSiNo{
+    width: 50%;
+    margin: 0 auto;
+}
+#sinEdad{
+    font-size: 25px;
+    margin-top: 20%;
+}
