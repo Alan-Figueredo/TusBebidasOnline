@@ -4,8 +4,8 @@ import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import "../Footer/Footer.css"
 export const Footer =()=>{
     return(
-            <footer className="bg-dark text-white mt-5" id="footer">
-                <div className="row">
+            <footer className="bg-dark text-white mt-5 " id="footer">
+                <div className="row w-100">
                     <div className="col-sm-4 col-12 text-center">
                         <h2 className="mt-4 mb-3" id="tituloFooter">TusBebidasOnline</h2>
                     </div>
@@ -19,10 +19,9 @@ export const Footer =()=>{
                     <div className="col-sm-4 col-12 text-center">
                         <h2 className="mt-4 mb-3">Horarios</h2>
                         <p>⚪Lun a vie: 9-18hs</p>
-                        <p>⚪Sab: 9-13hs</p>
                     </div>
                 </div>
-                <div className="row">
+                <div className="row w-100">
                     <div className="col">
                         <p className="text-center">©2022 Copyright TusBebidasOnline</p>
                     </div>

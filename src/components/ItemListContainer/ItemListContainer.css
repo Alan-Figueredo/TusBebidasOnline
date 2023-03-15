@@ -2,7 +2,7 @@
     width: 200px;
     height: 200px;
 }
-.card{
+#itemContainer .card{
     text-align: center;
     width: 400px;
 }

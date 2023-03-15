@@ -8,3 +8,8 @@
     flex-direction: column;
     min-height: 70vh;
 }
+.category:hover{
+    cursor: pointer;
+    transform: scale(1.10);
+    transition: 300ms all ease;
+}

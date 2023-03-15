@@ -1,73 +1,83 @@
 import "bootstrap/dist/css/bootstrap.min.css"
 import { useEffect, useState } from "react";
-import {  useParams } from "react-router-dom";
+import { Container, Row } from "react-bootstrap";
+import { Link, NavLink, useParams } from "react-router-dom";
 import { useCart } from "../../context/CartContext";
+import { useNavigate } from "react-router";
 import { getFirestore } from "../../firebase";
-import { ItemCount } from "../ItemCount/ItemCount";
+import { MdArrowBackIos } from "react-icons/md"
 import "../itemDetail/ItemDetail.css"
-export const ItemDetail =()=>{
+import imagen from "../../images/Loading.gif"
+export const ItemDetail = () => {
     const { addItem } = useCart();
-    const [disabled, setDisabled] = useState(false);
     const [counter, setCounter] = useState(1);
     const { productID } = useParams();
-    const [product, setProduct] =useState({});
-    const [isLoading, setIsLoading] =useState(false)
-    useEffect(()=>{
-        const db = getFirestore() 
+    const [product, setProduct] = useState({});
+    const [isLoading, setIsLoading] = useState(false)
+    let navigate = useNavigate();
+    useEffect(() => {
+        const db = getFirestore()
         const productCollection = db.collection("productos");
         const selectedProduct = productCollection.doc(productID);
         setIsLoading(true);
         selectedProduct
             .get()
-            .then((response)=> {
-            setProduct({...response.data(), id: response.id})
-        })
-        .finally(()=> setIsLoading(false)); 
+            .then((response) => {
+                setProduct({ ...response.data(), id: response.id })
+            })
+            .finally(() => setIsLoading(false));
     }, [productID]);
 
-    const handleClick=()=>{
-        addItem(product,counter);
+    const handleClick = () => {
+        addItem(product, counter);
     };
-    const sumar=()=>{
-        if(counter < product.stock){
-            setCounter((prevState)=>prevState+1)
-        }else{
-            setDisabled(true)
+    const prueba = () => {
+        let lista = [];
+        for (let i = 1; i <= (product.stock); i++) {
+            lista.push(<option key={i} value={i} >{i}</option>)
         }
-    }
-    const restar=()=>{
-        if(counter > 1){
-            setCounter((prevState)=>prevState-1)
-            setDisabled(false)
-        }else{
-            setCounter(counter);
-        }
+        return lista
     }
 
-    if(isLoading || !product) return <p className="text-center" id="loading">Cargando los productos...</p>
-    return(
-            <div className="shadow text-center card mt-5" id="container">
-                <div className="card-body row">
-                    <div className="col-sm-7 col-12">
-                        <img className="img-fluid img-thumbnail" src={product.img} alt={product.name}/>
+    if (isLoading || !product) return <div className="centrado"><img src={imagen} alt="loading" /></div>
+    return (
+        <>
+            <NavLink to="/" className="botonBack">
+                <MdArrowBackIos style={{fontSize:"30px", display:"inline-block", marginLeft:"10px"}} /><p style={{fontSize:"22px", display:"inline-block", alignContent:"center", alignItems:"center"}}>Volver a la tienda</p>
+            </NavLink>
+            <div className="w-50 m-auto card my-3">
+                <Row className="my-2">
+                    <div className="col-6">
+                        <img className="img-fluid img-thumbnail mx-2" src={product.img} alt={product.name} />
                     </div>
-                    <div className="col-sm-5 col-12" >
-                        <h5 className="card-title" id="tituloCard">{product.name}</h5>
-                        <p className="card-text">{product.description}</p>
-                        <p className="card-text">Stock disponible: {product.stock}</p>
-                        <p className="my-4" id="fuentePrecio"><b>${product.price}</b></p>
-                        <ItemCount  sumar={sumar} restar={restar} counter={counter} setCounter={setCounter} disabled={disabled}/>
-                        {counter === product.stock && <div className="alert alert-danger" role="alert" id="alertaStock" >Llegaste al limite de stock!</div>}
-                        <div className="mb-3 row">
-                            <div className="col-sm-2 card-body">
-                                <button onClick={handleClick} className="btn" id="agregarCarrito">Agregar al carrito</button>
-                            </div>
+                    <div className="col-5 my-auto">
+                        <div className="text-align-justify">
+
+                            <p className="nombreItem"><b>{product.name}</b></p>
+                            <p><b>{product.marca}</b></p>
+                            {/* <p className="estrellas">*****</p> */}
+                            <span className="precio">${product.price}</span><p className="cuotas">Hasta 12 cuotas sin interés</p>
+                            <span className="my-3 ">Envío:<b> Acordar con el vendedor</b></span>
                         </div>
-                    </div>
-                    
-                </div>
+                        <Link to={`/cart`} className="my-3 col-sm-12 col-10 btn btn-primary" onClick={handleClick}><a style={{ all: "unset" }}
+                            rel="noopener noreferrer" >Comprar ahora</a>
+                        </Link>
 
-                
+                        <Row>
+                            <button className="my-3 ms-2 col-sm-8 col-10  btn btn-primary" onClick={handleClick}>Agregar al carrito</button>
+                            <select name="quantity" onChange={(evt) => { setCounter(Number(evt.target.value)) }} className="col-sm-3 mt-3 ms-3" style={{ height: "30px" }} >
+                                {prueba()}
+                            </select>
+
+                        </Row>
+                    </div>
+                </Row>
+                <hr />
+                <Row className="mx-4 my-4">
+                    <h3>Descripción</h3>
+                    <p>{product.description}</p>
+                </Row>
             </div>
+        </>
     )
 }

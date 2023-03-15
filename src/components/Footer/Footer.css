@@ -9,3 +9,11 @@
 #tituloFooter{
     margin-left: 10px;
 }
+#footer h2{
+    font-size: 28px;
+}
+.iconos:hover{
+    cursor: pointer;
+    transform: scale(1.10);
+    transition: all 300ms ease;
+}

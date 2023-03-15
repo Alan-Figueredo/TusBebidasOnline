@@ -1,31 +1,24 @@
-#fuentePrecio{
-    font-size: 20px;
+.centrado {
+    margin: auto;
+    width: 4%;
+    height: 33vh;
+    margin-top: 15%;
+    /* puedes ajustar el valor de la anchura según tus necesidades */
 }
-#loading{
-    font-size: 20px;
-    margin-top: 17%;
-    margin-bottom: 18%;
+
+.nombreItem {
+    font-size: 35px;
 }
-#container{
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    min-height: 70vh;
+
+.botonBack {
+    cursor: pointer;
+    color: black;
 }
-#tituloCard{
+
+.botonBack:hover {
+    color: rgb(134, 134, 134);
+    transition: 400ms all ease;
+}
+.precio{
     font-size: 30px;
-    height: 20%;
-}
-#alertaStock{
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-}
-#agregarCarrito{
-    background-color: rgba(65,137,230,.15);
-    color: #3483fa;
-    width: auto;
 }

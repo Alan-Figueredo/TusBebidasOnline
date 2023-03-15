@@ -4,7 +4,8 @@ export const CartContext = createContext([]);
 
 export const CartProvider = ({ children })=>{
     const [cart, setCart] = useState([]);
-    const [cantidadCarrito, setCantidadCarrito] = useState(0)
+    const [cantidadCarrito, setCantidadCarrito] = useState(0);
+    const [categoria, setCategoria] = useState("...")
 
     useEffect(()=>{
         const getCantidad = ()=>{
@@ -50,7 +51,7 @@ export const CartProvider = ({ children })=>{
         return total;
     }
     return(
-        <CartContext.Provider value={{cart, addItem, removeItem, clearAll, calcularTotal, cantidadCarrito }}>
+        <CartContext.Provider value={{cart, addItem, removeItem, clearAll, calcularTotal, cantidadCarrito, categoria, setCategoria }}>
             {children}
         </CartContext.Provider>
     )
