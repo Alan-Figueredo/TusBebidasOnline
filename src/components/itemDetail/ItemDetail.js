@@ -1,9 +1,8 @@
 import "bootstrap/dist/css/bootstrap.min.css"
 import { useEffect, useState } from "react";
-import { Container, Row } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 import { Link, NavLink, useParams } from "react-router-dom";
 import { useCart } from "../../context/CartContext";
-import { useNavigate } from "react-router";
 import { getFirestore } from "../../firebase";
 import { MdArrowBackIos } from "react-icons/md"
 import "../itemDetail/ItemDetail.css"
@@ -14,7 +13,6 @@ export const ItemDetail = () => {
     const { productID } = useParams();
     const [product, setProduct] = useState({});
     const [isLoading, setIsLoading] = useState(false)
-    let navigate = useNavigate();
     useEffect(() => {
         const db = getFirestore()
         const productCollection = db.collection("productos");
