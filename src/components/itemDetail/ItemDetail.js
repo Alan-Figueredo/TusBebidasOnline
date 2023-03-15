@@ -58,7 +58,7 @@ export const ItemDetail = () => {
                             <span className="my-3 ">Envío:<b> Acordar con el vendedor</b></span>
                         </div>
                         <Link to={`/cart`} className="my-3 col-sm-12 col-10 btn btn-primary" onClick={handleClick}><a style={{ all: "unset" }}
-                            rel="noopener noreferrer" >Comprar ahora</a>
+                            href="#top">Comprar ahora</a>
                         </Link>
 
                         <Row>
