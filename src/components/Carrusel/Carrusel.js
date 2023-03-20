@@ -1,14 +1,13 @@
 import Carousel from 'react-bootstrap/Carousel';
-
+import "./Carrusel.css"
 function Carrusel() {
     return (
-        <Carousel fade>
+        <Carousel fade id="carrusel">
             <Carousel.Item>
                 <img
-                    className="d-block w-100"
+                    className="d-block w-100 carruselItem"
                     src="https://www.absolut.com/wp-content/uploads/ADAPTACION_WEB_DESKTOP-1.jpg?imwidth=1200"
-                    alt="Third slide"
-                    style={{ height: "450px" }}
+                    alt="first slide"
                 />
                 <Carousel.Caption>
                     <h3>Absolut Pride</h3>
@@ -17,22 +16,16 @@ function Carrusel() {
             </Carousel.Item>
             <Carousel.Item>
                 <img
-                    className="d-block w-100"
+                    className="d-block w-100 carruselItem"
                     src="https://bodegaelbarril.es/wp-content/uploads/2021/01/v4Banner_Home_Jack_Daniels.jpg"
                     alt="Second slide"
-                    style={{ height: "450px" }}
                 />
-                <Carousel.Caption>
-                    <h3 style={{color:"#2e2e2e"}}>Hace tu pedido en 3 simples pasos</h3>
-                    <p style={{color:"#2e2e2e"}}>Conseguí eso que más queres.</p>
-                </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
                 <img
-                    className="d-block w-100"
+                    className="d-block w-100 carruselItem"
                     src="https://www.fernetbranca.com/wp-content/uploads/2016/07/section_background_02-1.jpg"
-                    alt="First slide"
-                    style={{ height: "450px" }}
+                    alt="Third slide"
                 />
                 <Carousel.Caption>
                     <h3>TRES SORBOS</h3>

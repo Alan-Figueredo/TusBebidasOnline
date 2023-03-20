@@ -1,0 +1,14 @@
+.carruselItem{
+    height: 450px;
+}
+@media screen and (max-width:767px){
+    .carruselItem{
+        height: 230px;
+    }
+    #carrusel h3{
+        font-size: 20px;
+    }
+    #carrusel p{
+        font-size: 10px;
+    }
+}
