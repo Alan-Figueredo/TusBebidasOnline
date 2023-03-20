@@ -6,19 +6,23 @@ export const SideNavBar = ({ abrir, handle }) => {
     const handleClick = handle;
     return (
         <Offcanvas show={AbrirCerrar} onHide={handleClick} >
-            <Offcanvas.Header closeButton closeVariant='white' style={{ height: "80px", backgroundColor:"grey" }}>
+            <Offcanvas.Header closeButton closeVariant='white' style={{ height: "80px", backgroundColor: "#084298" }}>
                 <Link to="/" className="nombreH1"><h1 >TusBebidasOnline</h1></Link>
             </Offcanvas.Header>
             <hr className=' mt-0' />
             <Offcanvas.Body>
                 <Row>
-                    <ul style={{listStyle:"none", left:"0"}}>
+                    <ul style={{ listStyle: "none", left: "0" }}>
                         <li className="nav-item ">
-                            <Link to="aboutUs" className="nav-link item" style={{textDecoration:"none", color:"black"}} onClick={handleClick}>Sobre nosotros</Link>
+                            <Link to="/" className="nav-link item" style={{ textDecoration: "none", color: "black" }} onClick={handleClick}>Inicio</Link>
                         </li>
-                        <hr/>
+                        <hr />
                         <li className="nav-item ">
-                            <Link to="tienda" className="nav-link item" style={{textDecoration:"none", color:"black"}} onClick={handleClick}>Tienda</Link>
+                            <Link to="aboutUs" className="nav-link item" style={{ textDecoration: "none", color: "black" }} onClick={handleClick}>Sobre nosotros</Link>
+                        </li>
+                        <hr />
+                        <li className="nav-item ">
+                            <Link to="tienda" className="nav-link item" style={{ textDecoration: "none", color: "black" }} onClick={handleClick}>Tienda</Link>
                         </li>
                         <hr />
                     </ul>

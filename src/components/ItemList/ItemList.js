@@ -42,11 +42,12 @@ function ItemList() {
                             <Item key={product.id} product={product} id={product.id} />
                         </div>
                     )))}
-                    <div className="col-12 col-sm-3 contenedor text-center" style={{marginTop:"20vh"}}>
-                        <button className="btn btn-primary w-50 objeto" onClick={()=>{navigate("/tienda")}}>Ver más</button>
+                    <div className="col-12 col-sm-3 contenedor text-center" style={{ marginTop: "20vh" }}>
+                        <button className="btn btn-primary w-50 objeto" onClick={() => { navigate("/tienda") }}>Ver más</button>
                     </div>
                 </div>
             </div>
+
         )
     }
 }

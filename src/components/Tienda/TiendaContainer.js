@@ -6,7 +6,6 @@ import { BarraCategorias } from "../Categories/BarraCategorias";
 import { useAge } from "../../context/AgeContext";
 import { Mayor } from "../Mayor/Mayor";
 
-
 export const Tienda = () => {
     
     const { mayor } = useAge();
@@ -25,9 +24,7 @@ export const Tienda = () => {
         }
     );
     return (
-
-
-        <div className="container">
+        <div className="container" style={{minHeight:"64vh"}}>
             <Mayor />
             {mayor === false && <div><p className="text-center" id="sinEdad"><b>¡No contas con la edad suficiente para entrar a la pagina!</b></p></div>}
             {mayor === true &&

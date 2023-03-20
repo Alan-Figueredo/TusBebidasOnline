@@ -7,7 +7,7 @@ import "./NavBar.css";
 import { SideNavBar } from './SideNavBar';
 import { useAltPag } from '../../context/AlturaContext';
 import { useCart } from '../../context/CartContext';
-
+import drinks from "../../images/drinks.png"
 export const NavBar = () => {
     const { ubicacionPrincipal, desplazamiento_Actual } = useAltPag();
     const [AbrirCerrar, setAbrirCerrar] = useState(false)
@@ -37,7 +37,8 @@ export const NavBar = () => {
                     <button className="hamburger col-1" id="hamburger" onClick={(handleClick)}>
                         <FaBars />
                     </button>
-                    <Link to="/" className="nombreH1 ms-2"><h1 >TusBebidasOnline</h1></Link>
+                    <img src={drinks} alt="logo bebidas" className='img-fluid' style={{flex: "0 0 auto", width: "17%"}}/>
+                    <Link to="/" className="nombreH1 ms-1"><h1 style={{fontSize:"20px"}}>TusBebidasOnline</h1></Link>
                     <><BsCart3 className="navCart mt-1 pb-sm-0 pb-1 " style={cantidadCarrito === 0 ? { cursor: "pointer", marginLeft: "auto", marginRight: "22px" } : { cursor: "pointer", marginLeft: "auto", marginRight: "15px" }} onClick={handleShow} />{cantidadCarrito === 0 ? "" : <span className="translate-middle badge rounded-pill" style={{ cursor: "pointer", backgroundColor: "goldenrod" }} onClick={handleShow}>{cantidadCarrito}</span>}</>
                 </Navbar>
                 <SideNavBar abrir={AbrirCerrar} handle={handleClick} />
@@ -47,7 +48,8 @@ export const NavBar = () => {
         return (
             <div className="DivNav">
                 <Navbar className="d-flex flex-row w-100">
-                    <Link to="/" className="nombreH1 ms-5"><h1 >TusBebidasOnline</h1></Link><div>
+                    <img src={drinks} alt="logo bebidas" className='img-fluid' style={{flex: "0 0 auto", width: "5.333333%"}}/>
+                    <Link to="/" className="nombreH1 ms-2"><h1 style={{fontSize:"27px"}}>TusBebidasOnline</h1></Link><div>
 
                     </div>
                     <ul className={`nav nav-ul col-sm-7 col-8 ${AbrirCerrar}`} id="ListaNav">

@@ -17,7 +17,7 @@
     margin-left: -11px !important;
 }
 .DivNav{
-    background-color: grey;
+    background-color: #084298;
     z-index: 5;
     position: sticky;
     width: 100%;
@@ -93,9 +93,6 @@ and (min-width : 1224px) {
         text-decoration: none;
         font-size: 20px;
     }
-  .nombreH1{
-    font-size: 30px
-  }
 }
 
 @media only screen and (min-width : 1920px) {
@@ -104,7 +101,4 @@ and (min-width : 1224px) {
         text-decoration: none;
         font-size: 20px;
     }
-    .nombreH1{
-        font-size: 40px
-      }
 }
