@@ -12,3 +12,14 @@
     margin-bottom: 15px;
     height: 200px;
 }
+@media screen and (max-width:767px){
+    .promos{
+        font-size: 22px;
+        font-weight: 490;
+    }
+    .imagenesPromo{
+        margin: auto;
+        margin-bottom: 5px;
+        height: 100px;
+    }
+}

@@ -22,3 +22,25 @@
 .precio{
     font-size: 30px;
 }
+.prueba{
+    width: 50%;
+    margin: auto;
+}
+@media screen and (max-width:767px){
+    .prueba{
+        width: 90%;
+    }
+    .nombreItem{
+        font-size: 25px;
+    }
+    .precio{
+        font-size: 24px;
+    }
+    .centrado {
+        margin: auto;
+        width: 25%;
+        height: 33vh;
+        margin-top: 50%;
+        /* puedes ajustar el valor de la anchura según tus necesidades */
+    }
+  }

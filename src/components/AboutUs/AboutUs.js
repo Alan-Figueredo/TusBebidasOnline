@@ -1,26 +1,43 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
-
-const AboutUs = ()=>{
-    return(
-        <div className="container my-3">
-            <h2 className="text-center mb-3">Sobre Nosotros</h2>
-            <div className="row">
-                <div className="col-sm-6 col-12">
-                    <h3>Inicio:</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sollicitudin nibh sit amet commodo nulla. Quis auctor elit sed vulputate. Ut tellus elementum sagittis vitae. Massa ultricies mi quis hendrerit dolor magna eget est. Ultrices dui sapien eget mi proin sed. Placerat vestibulum lectus mauris ultrices. At ultrices mi tempus imperdiet nulla malesuada. Vel eros donec ac odio tempor. Commodo nulla facilisi nullam vehicula ipsum a. Sit amet purus gravida quis. Id leo in vitae turpis massa.
-                        sed elementum tempus egestas. Augue neque gravida in fermentum et. Etiam erat velit scelerisque in dictum non consectetur.
-                    </p>
-                    <h3>Trayectoria:</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sollicitudin nibh sit amet commodo nulla. Quis auctor elit sed vulputate. Ut tellus elementum sagittis vitae. Massa ultricies mi quis hendrerit dolor magna eget est. Ultrices dui sapien eget mi proin sed. Placerat vestibulum lectus mauris ultrices. At ultrices mi tempus imperdiet nulla malesuada. Vel eros donec ac odio tempor. Commodo nulla facilisi nullam vehicula ipsum a. Sit amet purus gravida quis. Id leo in vitae turpis massa.
-                        t aliquam etiam erat. Augue neque gravida in fermentum et. Etiam erat velit scelerisque in dictum non consectetur.
-                    </p>
+import "./AboutUs.css"
+import { AiOutlineDeliveredProcedure } from "react-icons/ai";
+import { RxRocket } from "react-icons/rx"
+import { BiTrophy } from "react-icons/bi"
+import us from "../../images/us.png"
+const AboutUs = () => {
+    return (
+        <section id="aboutUs">
+            <div className="container my-3">
+                <div className="row">
+                    <div className="col-sm-7 col-12 mb-3">
+                        <h2 className="sobreNosotros ">Sobre Nosotros</h2>
+                        <p className="mt-2 col-12 col-sm-9"> At ultrices mi tempus imperdiet nulla malesuada. Vel eros donec ac odio tempor. Commodo nulla facilisi nullam vehicula ipsum a. Sit amet purus gravida quis. Id leo in vitae turpis massa.
+                            sed elementum tempus egestas. Augue neque gravida in fermentum et.
+                        </p>
+                        <p className="mt-2 col-12 col-sm-9"> At ultrices mi tempus imperdiet nulla malesuada. Vel eros donec ac odio tempor. Commodo nulla facilisi nullam vehicula ipsum a. Sit amet purus gravida quis. Id leo in vitae turpis massa.</p>
+                    </div>
+                    <div className="col-sm-5 col-12 mb-3">
+                        <img src={us} className="img-fluid" style={{ marginTop: "100px" }} alt="us" />
+                    </div>
                 </div>
-                <div className="col-sm-6 col-12">
-                    <img src="https://i.pinimg.com/originals/15/1b/40/151b407993b747a2f9019c88f788e326.jpg" alt="sobreNosotros" className="img-fluid"/>
+                <hr />
+                <div className="row mt-5">
+                    <div className="col-sm col-12 text-center">
+                        <AiOutlineDeliveredProcedure className="iconos" />
+                        <p className="mt-4 col-7 mx-auto">lorem ipsum asdkopas. Augue neque gravida in fermentum et.</p>
+                    </div>
+                    <div className="col-sm col-12 text-center">
+                        <RxRocket className="iconos" />
+                        <p className="mt-4 col-7 mx-auto">lorem ipsum asdkopas. Augue neque gravida in fermentum et.</p>
+                    </div>
+                    <div className="col-sm col-12 text-center">
+                        <BiTrophy className="iconos" />
+                        <p className="mt-4 col-7 mx-auto">lorem ipsum asdkopas. Augue neque gravida in fermentum et.</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 export default AboutUs;

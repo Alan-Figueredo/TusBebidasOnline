@@ -1,19 +1,16 @@
 import { useState } from "react";
 import { useEffect } from "react";
-import { getFirestore } from "../../firebase/index";
 import { useNavigate } from "react-router";
 import { Card, NavLink, Placeholder } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import { useCart } from "../../context/CartContext";
+import { getFirestore } from "../../firebase";
 
-export const BarraCategorias = () => {
+export const BarraFiltrado = () => {
     let navigate = useNavigate();
     const [data, setData] = useState([])
     const nombreCategorias = [];
     const [isLoading, setIsLoading] = useState(true)
-    const { setCategoria } = useCart()
     data.forEach(element => {
-        nombreCategorias.push({ name: element.category, id: element.categoryID, img: element.img, category: element.category });
+        nombreCategorias.push({ name: element.category, id: element.categoryID, img: element.img });
     });
 
     const nombreCategoriasMap = nombreCategorias.map(elemento => {
@@ -34,13 +31,13 @@ export const BarraCategorias = () => {
     }, []);
     if (window.innerWidth <= 768) {
         return (
-            <div className="row w-100 justify-content-between m-auto">
+            <div className="row w-100 justify-content-center">
                 {unicos.map((filtro) => {
                     return (
-                        <Link to={`/category/${filtro.id}`} onClick={()=>{setCategoria(filtro.category)}} className="col-sm  col-5 card mx-2 mb-4 mt-2" style={{ height: "17vh", color: "black", textDecoration: "none" }}>
+                        <NavLink onClick={() => { navigate(`${filtro.id}`) }} className="col-sm  col-5 card mx-2 mb-4" style={{ height: "10vh" }}>
                             <img className="m-auto" style={{ height: "50px" }} alt={unicos.name} src={filtro.img} />
                             <p className="text-center">{filtro.name}</p>
-                        </Link>
+                        </NavLink>
                     )
                 })}
             </div>
@@ -90,15 +87,13 @@ export const BarraCategorias = () => {
 
     } else {
         return (
-            <div className="row " style={{ justifyContent: "space-between" }}>
+            <div className="row w-100">
                 {unicos.map((filtro) => {
                     return (
-                        <div key={filtro.id} className="col-2"  onClick={()=>{setCategoria(filtro.category)}} >
-                            <Link to={`/category/${filtro.id}`}  className="card shadow-sm my-3 category"   style={{ height: "19vh", color: "black", textDecoration: "none" }}>
-                                <img value={filtro.category} className="m-auto" style={{ height: "100px" }} alt={unicos.name} src={filtro.img} />
-                                <p className="text-center text-dark">{filtro.name}</p>
-                            </Link>
-                        </div>
+                        <NavLink onClick={() => { navigate(`${filtro.id}`) }} className="col-sm card mx-5 mt-3 mb-4" style={{ height: "19vh" }}>
+                            <img className="m-auto" style={{ height: "100px" }} alt={unicos.name} src={filtro.img} />
+                            <p className="text-center">{filtro.name}</p>
+                        </NavLink>
                     )
                 })}
             </div>

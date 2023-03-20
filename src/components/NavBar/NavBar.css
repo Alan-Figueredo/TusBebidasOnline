@@ -1,27 +1,110 @@
-#nombreH1{
-    color: white;
-    font-size: 25px;
-}
-#linkH1{
-    text-decoration: none;
-}
-.navBarStyle{
-    background-color: grey;
-    border: none;
-}
-.vinculo{
+.nombreH1{
     color: white;
     text-decoration: none;
+    justify-self: center;
 }
-.vinculo:hover{
-    color: rgb(230, 230, 230);
+.nombreH1:hover{
+    color: rgb(255, 248, 235);
+    font-weight: 600;
     text-decoration: none;
+    transform: scale(1.02);
+    transition: 200ms all ease;
 }
-.nombresCategorias{
-    text-decoration: none;
-    color: black;
+.dropdown-toggle::after {
+    visibility: hidden;
 }
-#dropDown{
+#ListaNav{
+    margin-left: -11px !important;
+}
+.DivNav{
     background-color: grey;
-    border: none;
+    z-index: 5;
+    position: sticky;
+    width: 100%;
+    transition: 1s all ease;
+}
+nav a{
+    color: white;
+}
+.fa-shopping-cart{
+    font-size: 20px;
+    color: white;
+}
+.fa-user{
+    font-size: 15px;
+    border: solid;
+    border-radius: 30px;
+    border-color: white;
+}
+.navCart{
+    font-size: 20px;
+    color: white;
+}
+.navBell{
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+}
+
+.hamburger{
+    background-color: transparent;
+    display: none;
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+.translate-midle{
+    transform: translate(-100%,-50%)!important;
+}
+
+.links{
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+}
+.links:hover{
+    color: rgb(58, 58, 58);
+    font-weight: 600;
+    text-decoration: none;
+    transform: scale(1.10);
+    transition: 300ms all ease;
+}
+@media screen and (max-width:767px){
+    .nav-ul{
+        display: none;
+        flex-direction: column;
+    }
+    .nav-ul.show{
+        display: flex;
+    }
+    .hamburger{
+        display: block;
+    }
+    .nav-link {
+        font-size: 17px;
+    }
+}
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+    .links{
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+    }
+  .nombreH1{
+    font-size: 30px
+  }
+}
+
+@media only screen and (min-width : 1920px) {
+    .links{
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+    }
+    .nombreH1{
+        font-size: 40px
+      }
 }

@@ -4,7 +4,6 @@
 }
 #itemContainer .card{
     text-align: center;
-    width: 400px;
 }
 #itemContainer{
     display: flex;

@@ -15,7 +15,7 @@ const Cart =()=>{
     return(
         <div id="Container">
             <div className="card mt-3" style={{width:"100%", marginLeft:"auto", marginRight:"auto"}}>
-                {cart[0] == null && <div className="my-5 text-center"><h2>Ups! Parece que no tenes nada en el carrito.</h2><p>¡Volve a la tienda para encontrar los productos que necesitas!</p><Link to="/"><button className="btn btn-primary mt-3">Volver a la tienda</button></Link></div>}
+                {cart[0] == null && <div className="my-5 text-center"><h2>Ups! Parece que no tenes nada en el carrito.</h2><p>¡Volve a la tienda para encontrar los productos que necesitas!</p><Link to="/tienda"><button className="btn btn-primary mt-3">Volver a la tienda</button></Link></div>}
                 {cart.map((purchase)=>{
                         return (
                         <div className="mx-2" key={purchase.item.id}>

@@ -41,7 +41,7 @@ const ThankYouPage =()=>{
                         </div>
                     )})}
                 <h3 className="my-3">Total ${order.total}</h3>
-            <Link to="/"><button className="btn btn-primary mt-3 mb-4" >Volver a la tienda</button></Link>
+            <Link to="tienda"><button className="btn btn-primary mt-3 mb-4" >Volver a la tienda</button></Link>
         </div>
     )
 }
