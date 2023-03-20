@@ -11,7 +11,7 @@ const ItemListContainer = () => {
     const { mayor } = useAge();
     return (
         <>
-            {mayor == true && <Carrusel />}
+            {mayor === true && <Carrusel />}
             <div className="container" id="itemContainer">
                 <Mayor />
                 {mayor === false && <div><p className="text-center" id="sinEdad"><b>¡No contas con la edad suficiente para entrar a la pagina!</b></p></div>}
