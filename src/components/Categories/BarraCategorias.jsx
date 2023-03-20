@@ -1,13 +1,11 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import { getFirestore } from "../../firebase/index";
-import { useNavigate } from "react-router";
-import { Card, NavLink, Placeholder } from "react-bootstrap";
+import { Card, Placeholder } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useCart } from "../../context/CartContext";
 
 export const BarraCategorias = () => {
-    let navigate = useNavigate();
     const [data, setData] = useState([])
     const nombreCategorias = [];
     const [isLoading, setIsLoading] = useState(true)

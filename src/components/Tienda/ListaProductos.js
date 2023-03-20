@@ -1,5 +1,4 @@
 import "bootstrap/dist/css/bootstrap.min.css"
-import { FaCartPlus } from "react-icons/fa";
 import { Card, Placeholder } from "react-bootstrap";
 import { Item } from "../Item/Item";
 import { useTiendaContext } from "../../context/TiendaContext";

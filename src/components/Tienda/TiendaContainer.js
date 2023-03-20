@@ -24,7 +24,6 @@ export const Tienda = () => {
             );
         }
     );
-    const end = "end"
     return (
 
 
